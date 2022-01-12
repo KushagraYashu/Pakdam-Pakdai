@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\PlayerMovementPlayer2.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\PlayerMovementPlayer1.cs" />
+    <Compile Include="Assets\Scripts\AbilityScriptPlayer1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
