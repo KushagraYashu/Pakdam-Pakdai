@@ -21,7 +21,7 @@ public class PlayerMovementPlayer1 : MonoBehaviour
         float h = Input.GetAxis("Horizontal Player 1");
         float v = Input.GetAxis("Vertical Player 1");
         transform.Translate(new Vector3(h, 0, v) * speed * Time.deltaTime);
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             if (!isJumping)
             {
