@@ -1,4 +1,4 @@
-#Pakdam-Pakdai
+# Pakdam Pakdai
 
 
-A collaborative mini multiplayer touch and win game made with grenedare planned to host in the WEB.
+### A collaborative mini multiplayer touch and win game made by *@grenedare* and *@KushagraYashu*, planned to host on the WEB.
