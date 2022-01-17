@@ -44,8 +44,13 @@ public class RoleCumRoundManager : MonoBehaviour
             {
                 if(players[i].transform.name != this.transform.name)
                 {
-                    wonPlayerName.text = players[i].transform.name;
-                    finalScreen.gameObject.SetActive(true);
+                    if(!GameObject.FindGameObjectWithTag("Winner Manager").GetComponent<WinnerManager>().winnerDecided)
+                    {
+                        wonPlayerName.text = players[i].transform.name;
+                        
+                        finalScreen.gameObject.SetActive(true);
+                        GameObject.FindGameObjectWithTag("Winner Manager").GetComponent<WinnerManager>().winnerDecided = true;
+                    }
                 }
             }
         }
@@ -53,21 +58,28 @@ public class RoleCumRoundManager : MonoBehaviour
 
     public void CheckCollisionAndEndGame(Collision collision)
     {
-        if ((this.gameObject.GetComponent<RoleCumRoundManager>().isAttacker && collision.gameObject.GetComponent<RoleCumRoundManager>().isDefender))
+        if (!GameObject.FindGameObjectWithTag("Winner Manager").GetComponent<WinnerManager>().winnerDecided)
         {
-            print("Game has Ended");
-            wonPlayerName.text = this.transform.name;
-            finalScreen.gameObject.SetActive(true);
-            //Destroy(this.gameObject);
-            //Destroy(collision.gameObject);
-        }
-        if ((this.gameObject.GetComponent<RoleCumRoundManager>().isDefender && collision.gameObject.GetComponent<RoleCumRoundManager>().isAttacker))
-        {
-            print("Game has Ended");
-            wonPlayerName.text = collision.transform.name;
-            finalScreen.gameObject.SetActive(true);
-            //Destroy(this.gameObject);
-            //Destroy(collision.gameObject);
+            if ((this.gameObject.GetComponent<RoleCumRoundManager>().isAttacker && collision.gameObject.GetComponent<RoleCumRoundManager>().isDefender))
+            {
+                print("Game has Ended");
+                wonPlayerName.text = this.transform.name;
+                
+                finalScreen.gameObject.SetActive(true);
+                GameObject.FindGameObjectWithTag("Winner Manager").GetComponent<WinnerManager>().winnerDecided = true;
+                //Destroy(this.gameObject);
+                //Destroy(collision.gameObject);
+            }
+            if ((this.gameObject.GetComponent<RoleCumRoundManager>().isDefender && collision.gameObject.GetComponent<RoleCumRoundManager>().isAttacker))
+            {
+                print("Game has Ended");
+                wonPlayerName.text = collision.transform.name;
+                
+                finalScreen.gameObject.SetActive(true);
+                GameObject.FindGameObjectWithTag("Winner Manager").GetComponent<WinnerManager>().winnerDecided = true;
+                //Destroy(this.gameObject);
+                //Destroy(collision.gameObject);
+            }
         }
     }
 }
