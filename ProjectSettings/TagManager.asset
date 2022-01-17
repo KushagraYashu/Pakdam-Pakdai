@@ -7,6 +7,7 @@ TagManager:
   - ground
   - target
   - Speed Ability
+  - End Collider
   layers:
   - Default
   - TransparentFX

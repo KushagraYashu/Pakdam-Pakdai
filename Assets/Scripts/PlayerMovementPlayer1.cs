@@ -35,7 +35,7 @@ public class PlayerMovementPlayer1 : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        print(collision.transform.tag);
+        //print(collision.transform.tag);
         if (collision.transform.tag == "ground")
         {
             isJumping = false;
