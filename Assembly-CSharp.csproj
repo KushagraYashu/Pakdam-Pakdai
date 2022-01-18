@@ -56,14 +56,16 @@
     <Compile Include="Assets\Scripts\GotoBSDK.cs" />
     <Compile Include="Assets\Scripts\PlayerMovementPlayer2.cs" />
     <Compile Include="Assets\Scripts\AbilityScriptPlayer1.cs" />
+    <Compile Include="Assets\Scripts\AbilityManager.cs" />
     <Compile Include="Assets\Scripts\RoleCumRoundManager.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\AbilityScriptPlayer2.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovementPlayer1.cs" />
     <Compile Include="Assets\Scripts\TimeManager.cs" />
-    <Compile Include="Assets\Scripts\AbilityManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovementPlayer1.cs" />
     <Compile Include="Assets\Scripts\WinnerManager.cs" />
+    <Compile Include="Assets\IgniteCoders\Simple Water Shader\Info\Scripts\Readme.cs" />
+    <Compile Include="Assets\IgniteCoders\Simple Water Shader\Resources\WaterReflection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -9,6 +9,7 @@ TagManager:
   - Speed Ability
   - End Collider
   - Winner Manager
+  - Speed Ability Spawn Point
   layers:
   - Default
   - TransparentFX
