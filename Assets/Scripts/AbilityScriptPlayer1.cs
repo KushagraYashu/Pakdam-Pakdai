@@ -29,10 +29,10 @@ public class AbilityScriptPlayer1 : MonoBehaviour
             abilityPickedUp = false;
         }
     }
-
+    
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag == "Speed Ability")
+        if(collision.transform.tag == "Speed Ability" && !abilityPickedUp)
         {
             abilityPickedUp = true;
             curAbilitySpeed = maxAbility;
